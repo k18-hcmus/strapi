@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_ban_details",
+  "info": {
+    "name": "UserBanDetail",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Description": {
+      "type": "text"
+    },
+    "CreateTime": {
+      "type": "datetime"
+    },
+    "Type": {
+      "type": "string"
+    },
+    "RecoverTime": {
+      "type": "datetime"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "User": {
+      "model": "account-uset",
+      "via": "UserBanDetails"
+    },
+    "Remover": {
+      "model": "account-uset",
+      "via": "RemoverBanDetails"
+    }
+  }
+}

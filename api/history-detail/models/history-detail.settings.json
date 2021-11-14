@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "history_details",
+  "info": {
+    "name": "HistoryDetail",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Action": {
+      "type": "string"
+    },
+    "CreateTime": {
+      "type": "datetime"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "User": {
+      "model": "account-uset",
+      "via": "HistoryDetails"
+    },
+    "Post": {
+      "model": "post",
+      "via": "HistoryDetails"
+    },
+    "Comment": {
+      "via": "HistoryDetails",
+      "model": "comment"
+    },
+    "RelatedUser": {
+      "model": "account-uset",
+      "via": "RelatedUserHistoryDetails"
+    }
+  }
+}

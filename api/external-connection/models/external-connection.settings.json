@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "external_connections",
+  "info": {
+    "name": "ExternalConnection"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ExternalID": {
+      "type": "string"
+    },
+    "DomainType": {
+      "type": "string"
+    }
+  }
+}

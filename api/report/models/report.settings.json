@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reports",
+  "info": {
+    "name": "Report",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Action": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "CreateTime": {
+      "type": "datetime"
+    },
+    "UpdateTime": {
+      "type": "datetime"
+    },
+    "Type": {
+      "type": "string"
+    },
+    "User": {
+      "model": "account-uset",
+      "via": "Reports"
+    },
+    "ReportedUser": {
+      "model": "account-uset",
+      "via": "ReportedUserReports"
+    },
+    "Reviwer": {
+      "model": "account-uset",
+      "via": "ReviewerReports"
+    },
+    "Post": {
+      "via": "Reports",
+      "model": "post"
+    },
+    "Comment": {
+      "via": "Reports",
+      "model": "comment"
+    },
+    "RemovedPostDetails": {
+      "via": "Report",
+      "collection": "removed-post-detail"
+    }
+  }
+}

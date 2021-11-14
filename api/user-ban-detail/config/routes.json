@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/user-ban-details",
+      "handler": "user-ban-detail.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-ban-details/count",
+      "handler": "user-ban-detail.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-ban-details/:id",
+      "handler": "user-ban-detail.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/user-ban-details",
+      "handler": "user-ban-detail.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/user-ban-details/:id",
+      "handler": "user-ban-detail.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/user-ban-details/:id",
+      "handler": "user-ban-detail.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

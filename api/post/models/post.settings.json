@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "Post",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "ViewCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "UpvoteCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "DownvoteCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "CreateTime": {
+      "type": "datetime"
+    },
+    "UpdateTime": {
+      "type": "datetime"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "PublishTime": {
+      "type": "datetime"
+    },
+    "Reports": {
+      "via": "Post",
+      "collection": "report"
+    },
+    "SubjectTag": {
+      "model": "subject-tag",
+      "via": "Posts"
+    },
+    "TeacherTag": {
+      "model": "teacher-tag",
+      "via": "Posts"
+    },
+    "User": {
+      "model": "account-uset",
+      "via": "Posts"
+    },
+    "HistoryDetails": {
+      "via": "Post",
+      "collection": "history-detail"
+    },
+    "Comments": {
+      "via": "Post",
+      "collection": "comment"
+    }
+  }
+}

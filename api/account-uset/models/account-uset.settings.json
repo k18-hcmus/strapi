@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "account_usets",
+  "info": {
+    "name": "AccountUser",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Username": {
+      "type": "string"
+    },
+    "DisplayName": {
+      "type": "string"
+    },
+    "Password": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "UserType": {
+      "type": "string",
+      "default": "Basic"
+    },
+    "ContributionPoint": {
+      "type": "integer",
+      "default": 0
+    },
+    "Status": {
+      "type": "string",
+      "default": "Active"
+    },
+    "UserBanDetails": {
+      "via": "User",
+      "collection": "user-ban-detail"
+    },
+    "RemoverBanDetails": {
+      "via": "Remover",
+      "collection": "user-ban-detail"
+    },
+    "Reports": {
+      "via": "User",
+      "collection": "report"
+    },
+    "ReportedUserReports": {
+      "via": "ReportedUser",
+      "collection": "report"
+    },
+    "ReviewerReports": {
+      "via": "Reviwer",
+      "collection": "report"
+    },
+    "RemovedPostDetails": {
+      "via": "Remover",
+      "collection": "removed-post-detail"
+    },
+    "Posts": {
+      "via": "User",
+      "collection": "post"
+    },
+    "HistoryDetails": {
+      "via": "User",
+      "collection": "history-detail"
+    },
+    "RelatedUserHistoryDetails": {
+      "via": "RelatedUser",
+      "collection": "history-detail"
+    },
+    "Comments": {
+      "via": "User",
+      "collection": "comment"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "majors",
+  "info": {
+    "name": "Major"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "CreateTime": {
+      "type": "datetime"
+    },
+    "SubjectTags": {
+      "via": "Major",
+      "collection": "subject-tag"
+    },
+    "TeacherTags": {
+      "via": "Major",
+      "collection": "teacher-tag"
+    }
+  }
+}

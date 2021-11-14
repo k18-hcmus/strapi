@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "removed_post_details",
+  "info": {
+    "name": "RemovedPostDetail",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Description": {
+      "type": "text"
+    },
+    "CreateTime": {
+      "type": "datetime"
+    },
+    "UpdateTime": {
+      "type": "datetime"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "Post": {
+      "model": "post"
+    },
+    "Remover": {
+      "model": "account-uset",
+      "via": "RemovedPostDetails"
+    },
+    "Report": {
+      "model": "report",
+      "via": "RemovedPostDetails"
+    }
+  }
+}
