@@ -10,9 +10,13 @@ module.exports = ({ env }) => ({
         database: env('DATABASE_NAME', 'forum_hcmus'),
         username: env('DATABASE_USERNAME', 'admin'),
         password: env('DATABASE_PASSWORD', 'admin'),
-        ssl: env.bool('DATABASE_SSL', false)
+        ssl: {
+          rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false),
+        },
       },
-      options: {}
+      options: {
+        ssl: env.bool('DATABASE_SSL', false),
+      }
     }
   }
 })
