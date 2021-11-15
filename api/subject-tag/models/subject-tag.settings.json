@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subject_tags",
+  "info": {
+    "name": "SubjectTag",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "CreateTime": {
+      "type": "datetime"
+    },
+    "UpdateTime": {
+      "type": "datetime"
+    },
+    "Category": {
+      "model": "category",
+      "via": "SubjectTags"
+    },
+    "Major": {
+      "model": "major",
+      "via": "SubjectTags"
+    },
+    "Posts": {
+      "via": "SubjectTag",
+      "collection": "post"
+    }
+  }
+}

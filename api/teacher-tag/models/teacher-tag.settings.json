@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teacher_tags",
+  "info": {
+    "name": "TeacherTag",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "CreateTime": {
+      "type": "datetime"
+    },
+    "UpdateTime": {
+      "type": "datetime"
+    },
+    "Category": {
+      "model": "category",
+      "via": "TeacherTags"
+    },
+    "Major": {
+      "model": "major",
+      "via": "TeacherTags"
+    },
+    "Posts": {
+      "via": "TeacherTag",
+      "collection": "post"
+    }
+  }
+}

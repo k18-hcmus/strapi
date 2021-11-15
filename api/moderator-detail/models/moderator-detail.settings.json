@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "moderator_details",
+  "info": {
+    "name": "ModeratorDetail",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ManageFlags": {
+      "type": "string"
+    },
+    "User": {
+      "model": "account-uset"
+    }
+  }
+}

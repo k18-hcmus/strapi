@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/removed-post-details",
+      "handler": "removed-post-detail.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/removed-post-details/count",
+      "handler": "removed-post-detail.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/removed-post-details/:id",
+      "handler": "removed-post-detail.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/removed-post-details",
+      "handler": "removed-post-detail.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/removed-post-details/:id",
+      "handler": "removed-post-detail.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/removed-post-details/:id",
+      "handler": "removed-post-detail.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "settings",
+  "info": {
+    "name": "Setting",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Language": {
+      "type": "string"
+    },
+    "Theme": {
+      "type": "string"
+    },
+    "Font": {
+      "type": "string"
+    },
+    "User": {
+      "model": "account-uset"
+    }
+  }
+}

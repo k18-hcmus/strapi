@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/moderator-details",
+      "handler": "moderator-detail.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/moderator-details/count",
+      "handler": "moderator-detail.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/moderator-details/:id",
+      "handler": "moderator-detail.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/moderator-details",
+      "handler": "moderator-detail.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/moderator-details/:id",
+      "handler": "moderator-detail.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/moderator-details/:id",
+      "handler": "moderator-detail.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

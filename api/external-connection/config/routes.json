@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/external-connections",
+      "handler": "external-connection.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/external-connections/count",
+      "handler": "external-connection.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/external-connections/:id",
+      "handler": "external-connection.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/external-connections",
+      "handler": "external-connection.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/external-connections/:id",
+      "handler": "external-connection.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/external-connections/:id",
+      "handler": "external-connection.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
