@@ -8,11 +8,15 @@ module.exports = ({ env }) => ({
         host: env('DATABASE_HOST', '127.0.0.1'),
         port: env.int('DATABASE_PORT', 5432),
         database: env('DATABASE_NAME', 'forum_hcmus'),
-        username: env('DATABASE_USERNAME', 'postgres'),
-        password: env('DATABASE_PASSWORD', '123'),
-        ssl: env.bool('DATABASE_SSL', false)
+        username: env('DATABASE_USERNAME', 'admin'),
+        password: env('DATABASE_PASSWORD', 'admin'),
+        ssl: {
+          rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false),
+        },
       },
-      options: {}
+      options: {
+        ssl: env.bool('DATABASE_SSL', false),
+      }
     }
   }
 })
