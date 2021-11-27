@@ -11,17 +11,17 @@ module.exports = ({ env }) => ({
         username: env('DATABASE_USERNAME', 'admin'),
         password: env('DATABASE_PASSWORD', 'admin'),
         ssl: {
-          rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false),
-        },
+          rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false)
+        }
       },
       options: {
         ssl: env.bool('DATABASE_SSL', false),
-        "pool":{
-            "min":0,
-             "max":15,
-              "idleTimeoutMillis":30000,
-              "createTimeoutMillis":30000,
-             "acquireTimeoutMillis":30000
+        pool: {
+          min: 0,
+          max: 15,
+          idleTimeoutMillis: 30000,
+          createTimeoutMillis: 30000,
+          acquireTimeoutMillis: 30000
         }
       }
     }
