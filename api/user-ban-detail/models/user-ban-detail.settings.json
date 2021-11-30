@@ -15,24 +15,18 @@
     "Description": {
       "type": "text"
     },
-    "CreateTime": {
-      "type": "datetime"
-    },
     "Type": {
       "type": "string"
-    },
-    "RecoverTime": {
-      "type": "datetime"
     },
     "Status": {
       "type": "string"
     },
     "User": {
-      "model": "account-uset",
+      "model": "account-user",
       "via": "UserBanDetails"
     },
     "Remover": {
-      "model": "account-uset",
+      "model": "account-user",
       "via": "RemoverBanDetails"
     }
   }

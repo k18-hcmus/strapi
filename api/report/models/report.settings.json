@@ -21,25 +21,19 @@
     "Status": {
       "type": "string"
     },
-    "CreateTime": {
-      "type": "datetime"
-    },
-    "UpdateTime": {
-      "type": "datetime"
-    },
     "Type": {
       "type": "string"
     },
     "User": {
-      "model": "account-uset",
+      "model": "account-user",
       "via": "Reports"
     },
     "ReportedUser": {
-      "model": "account-uset",
+      "model": "account-user",
       "via": "ReportedUserReports"
     },
     "Reviwer": {
-      "model": "account-uset",
+      "model": "account-user",
       "via": "ReviewerReports"
     },
     "Post": {

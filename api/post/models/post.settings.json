@@ -30,12 +30,6 @@
       "type": "integer",
       "default": 0
     },
-    "CreateTime": {
-      "type": "datetime"
-    },
-    "UpdateTime": {
-      "type": "datetime"
-    },
     "Status": {
       "type": "string"
     },
@@ -47,15 +41,15 @@
       "collection": "report"
     },
     "SubjectTag": {
-      "model": "subject-tag",
-      "via": "Posts"
+      "via": "Posts",
+      "model": "subject-tag"
     },
     "TeacherTag": {
-      "model": "teacher-tag",
-      "via": "Posts"
+      "via": "Posts",
+      "model": "teacher-tag"
     },
     "User": {
-      "model": "account-uset",
+      "model": "account-user",
       "via": "Posts"
     },
     "HistoryDetails": {

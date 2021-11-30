@@ -20,12 +20,6 @@
       "type": "integer",
       "default": 0
     },
-    "CreateTime": {
-      "type": "datetime"
-    },
-    "UpdateTime": {
-      "type": "datetime"
-    },
     "Content": {
       "type": "richtext"
     },
@@ -38,12 +32,12 @@
       "collection": "history-detail"
     },
     "User": {
-      "model": "account-uset",
+      "model": "account-user",
       "via": "Comments"
     },
     "Post": {
-      "model": "post",
-      "via": "Comments"
+      "via": "Comments",
+      "model": "post"
     },
     "ReplyComment": {
       "model": "comment"

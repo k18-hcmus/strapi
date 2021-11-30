@@ -2,7 +2,7 @@
     "routes": [{
             "method": "GET",
             "path": "/account-users",
-            "handler": "account-uset.find",
+            "handler": "account-user.find",
             "config": {
                 "policies": []
             }
@@ -10,7 +10,7 @@
         {
             "method": "GET",
             "path": "/account-users/count",
-            "handler": "account-uset.count",
+            "handler": "account-user.count",
             "config": {
                 "policies": []
             }
@@ -18,7 +18,7 @@
         {
             "method": "GET",
             "path": "/account-users/:id",
-            "handler": "account-uset.findOne",
+            "handler": "account-user.findOne",
             "config": {
                 "policies": []
             }
@@ -26,7 +26,7 @@
         {
             "method": "POST",
             "path": "/account-users",
-            "handler": "account-uset.create",
+            "handler": "account-user.create",
             "config": {
                 "policies": []
             }
@@ -34,7 +34,7 @@
         {
             "method": "PUT",
             "path": "/account-users/:id",
-            "handler": "account-uset.update",
+            "handler": "account-user.update",
             "config": {
                 "policies": []
             }
@@ -42,7 +42,7 @@
         {
             "method": "DELETE",
             "path": "/account-users/:id",
-            "handler": "account-uset.delete",
+            "handler": "account-user.delete",
             "config": {
                 "policies": []
             }
