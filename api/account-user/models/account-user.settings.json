@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "account_usets",
+  "collectionName": "account_users",
   "info": {
     "name": "AccountUser",
     "description": ""

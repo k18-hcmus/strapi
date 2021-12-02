@@ -15,12 +15,6 @@
     "Description": {
       "type": "text"
     },
-    "CreateTime": {
-      "type": "datetime"
-    },
-    "UpdateTime": {
-      "type": "datetime"
-    },
     "Status": {
       "type": "string"
     },
@@ -28,12 +22,12 @@
       "model": "post"
     },
     "Remover": {
-      "model": "account-uset",
+      "model": "account-user",
       "via": "RemovedPostDetails"
     },
     "Report": {
-      "model": "report",
-      "via": "RemovedPostDetails"
+      "via": "RemovedPostDetails",
+      "model": "report"
     }
   }
 }

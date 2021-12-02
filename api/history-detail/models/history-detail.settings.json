@@ -15,26 +15,23 @@
     "Action": {
       "type": "string"
     },
-    "CreateTime": {
-      "type": "datetime"
-    },
     "Description": {
       "type": "text"
     },
     "User": {
-      "model": "account-uset",
+      "model": "account-user",
       "via": "HistoryDetails"
     },
     "Post": {
-      "model": "post",
-      "via": "HistoryDetails"
+      "via": "HistoryDetails",
+      "model": "post"
     },
     "Comment": {
       "via": "HistoryDetails",
       "model": "comment"
     },
     "RelatedUser": {
-      "model": "account-uset",
+      "model": "account-user",
       "via": "RelatedUserHistoryDetails"
     }
   }

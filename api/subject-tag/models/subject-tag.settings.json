@@ -18,19 +18,13 @@
     "Description": {
       "type": "richtext"
     },
-    "CreateTime": {
-      "type": "datetime"
-    },
-    "UpdateTime": {
-      "type": "datetime"
-    },
     "Category": {
       "model": "category",
       "via": "SubjectTags"
     },
     "Major": {
-      "model": "major",
-      "via": "SubjectTags"
+      "via": "SubjectTags",
+      "model": "major"
     },
     "Posts": {
       "via": "SubjectTag",
