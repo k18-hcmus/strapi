@@ -22,12 +22,12 @@
       "type": "string"
     },
     "User": {
-      "model": "account-user",
-      "via": "UserBanDetails"
+      "via": "UserBanDetails",
+      "model": "account-user"
     },
     "Remover": {
-      "model": "account-user",
-      "via": "RemoverBanDetails"
+      "via": "RemoverBanDetails",
+      "model": "account-user"
     }
   }
 }

@@ -19,8 +19,8 @@
       "type": "text"
     },
     "User": {
-      "model": "account-user",
-      "via": "HistoryDetails"
+      "via": "HistoryDetails",
+      "model": "account-user"
     },
     "Post": {
       "via": "HistoryDetails",
@@ -31,8 +31,8 @@
       "model": "comment"
     },
     "RelatedUser": {
-      "model": "account-user",
-      "via": "RelatedUserHistoryDetails"
+      "via": "RelatedUserHistoryDetails",
+      "model": "account-user"
     }
   }
 }

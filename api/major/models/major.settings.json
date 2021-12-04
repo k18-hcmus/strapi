@@ -15,13 +15,9 @@
     "Name": {
       "type": "string"
     },
-    "SubjectTags": {
-      "via": "Major",
-      "collection": "subject-tag"
-    },
-    "TeacherTags": {
-      "via": "Major",
-      "collection": "teacher-tag"
+    "Tags": {
+      "via": "Majors",
+      "collection": "tag"
     }
   }
 }

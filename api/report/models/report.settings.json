@@ -25,16 +25,16 @@
       "type": "string"
     },
     "User": {
-      "model": "account-user",
-      "via": "Reports"
+      "via": "Reports",
+      "model": "account-user"
     },
     "ReportedUser": {
-      "model": "account-user",
-      "via": "ReportedUserReports"
+      "via": "ReportedUserReports",
+      "model": "account-user"
     },
     "Reviwer": {
-      "model": "account-user",
-      "via": "ReviewerReports"
+      "via": "ReviewerReports",
+      "model": "account-user"
     },
     "Post": {
       "via": "Reports",
