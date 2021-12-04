@@ -32,8 +32,8 @@
       "collection": "history-detail"
     },
     "User": {
-      "model": "account-user",
-      "via": "Comments"
+      "via": "Comments",
+      "model": "account-user"
     },
     "Post": {
       "via": "Comments",

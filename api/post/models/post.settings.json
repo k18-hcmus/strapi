@@ -40,17 +40,9 @@
       "via": "Post",
       "collection": "report"
     },
-    "SubjectTag": {
-      "via": "Posts",
-      "model": "subject-tag"
-    },
-    "TeacherTag": {
-      "via": "Posts",
-      "model": "teacher-tag"
-    },
     "User": {
-      "model": "account-user",
-      "via": "Posts"
+      "via": "Posts",
+      "model": "account-user"
     },
     "HistoryDetails": {
       "via": "Post",
@@ -59,6 +51,11 @@
     "Comments": {
       "via": "Post",
       "collection": "comment"
+    },
+    "Tags": {
+      "via": "Posts",
+      "collection": "tag",
+      "dominant": true
     }
   }
 }

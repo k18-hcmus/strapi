@@ -22,8 +22,8 @@
       "model": "post"
     },
     "Remover": {
-      "model": "account-user",
-      "via": "RemovedPostDetails"
+      "via": "RemovedPostDetails",
+      "model": "account-user"
     },
     "Report": {
       "via": "RemovedPostDetails",

@@ -78,6 +78,10 @@
     "Comments": {
       "via": "User",
       "collection": "comment"
+    },
+    "Gender": {
+      "type": "string",
+      "default": "Male"
     }
   }
 }

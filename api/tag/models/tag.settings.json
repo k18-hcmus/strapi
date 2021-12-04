@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "subject_tags",
+  "collectionName": "tags",
   "info": {
-    "name": "SubjectTag",
+    "name": "Tag",
     "description": ""
   },
   "options": {
@@ -18,17 +18,18 @@
     "Description": {
       "type": "richtext"
     },
-    "Category": {
-      "model": "category",
-      "via": "SubjectTags"
-    },
-    "Major": {
-      "via": "SubjectTags",
-      "model": "major"
+    "Majors": {
+      "collection": "major",
+      "via": "Tags",
+      "dominant": true
     },
     "Posts": {
-      "via": "SubjectTag",
+      "via": "Tags",
       "collection": "post"
+    },
+    "Category": {
+      "model": "category",
+      "via": "Tags"
     }
   }
 }
