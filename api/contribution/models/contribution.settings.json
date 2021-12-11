@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contributions",
+  "info": {
+    "name": "Contribution",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Value": {
+      "type": "integer",
+      "default": 0
+    },
+    "Date": {
+      "type": "date"
+    },
+    "User": {
+      "via": "Contributions",
+      "model": "account-user"
+    }
+  }
+}

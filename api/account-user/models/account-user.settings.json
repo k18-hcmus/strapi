@@ -31,10 +31,6 @@
       "type": "string",
       "default": "Basic"
     },
-    "ContributionPoint": {
-      "type": "integer",
-      "default": 0
-    },
     "Status": {
       "type": "string",
       "default": "Active"
@@ -82,6 +78,10 @@
     "Gender": {
       "type": "string",
       "default": "Male"
+    },
+    "Contributions": {
+      "via": "User",
+      "collection": "contribution"
     }
   }
 }
