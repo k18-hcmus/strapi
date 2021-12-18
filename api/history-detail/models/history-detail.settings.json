@@ -33,6 +33,15 @@
     "RelatedUser": {
       "via": "RelatedUserHistoryDetails",
       "model": "account-user"
+    },
+    "ActorId": {
+      "type": "integer"
+    },
+    "ActionId": {
+      "type": "integer"
+    },
+    "TargetId": {
+      "type": "integer"
     }
   }
 }
