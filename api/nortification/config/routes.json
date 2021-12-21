@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/nortifications",
+      "handler": "nortification.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nortifications/count",
+      "handler": "nortification.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nortifications/:id",
+      "handler": "nortification.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/nortifications",
+      "handler": "nortification.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/nortifications/:id",
+      "handler": "nortification.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/nortifications/:id",
+      "handler": "nortification.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

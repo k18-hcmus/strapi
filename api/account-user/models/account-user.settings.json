@@ -82,6 +82,19 @@
     "Contributions": {
       "via": "User",
       "collection": "contribution"
+    },
+    "FollowUsers": {
+      "collection": "account-user",
+      "via": "FollowedByUsers",
+      "dominant": true
+    },
+    "FollowedByUsers": {
+      "collection": "account-user",
+      "via": "FollowUsers"
+    },
+    "Nortifications": {
+      "via": "User",
+      "collection": "nortification"
     }
   }
 }

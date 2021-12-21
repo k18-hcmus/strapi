@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nortifications",
+  "info": {
+    "name": "Nortification",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Content": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "string"
+    },
+    "HistoryDetail": {
+      "model": "history-detail",
+      "via": "Nortifications"
+    },
+    "User": {
+      "model": "account-user",
+      "via": "Nortifications"
+    },
+    "Seen": {
+      "type": "boolean",
+      "default": false
+    },
+    "AdminPost": {
+      "model": "post",
+      "via": "Nortifications"
+    }
+  }
+}

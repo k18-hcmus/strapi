@@ -42,6 +42,10 @@
     },
     "TargetId": {
       "type": "integer"
+    },
+    "Nortifications": {
+      "via": "HistoryDetail",
+      "collection": "nortification"
     }
   }
 }
