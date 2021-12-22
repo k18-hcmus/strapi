@@ -56,6 +56,10 @@
       "via": "Posts",
       "collection": "tag",
       "dominant": true
+    },
+    "Nortifications": {
+      "via": "AdminPost",
+      "collection": "nortification"
     }
   }
 }
