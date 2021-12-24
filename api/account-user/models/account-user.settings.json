@@ -12,17 +12,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Username": {
-      "type": "string"
-    },
     "DisplayName": {
       "type": "string"
-    },
-    "Password": {
-      "type": "string"
-    },
-    "Email": {
-      "type": "email"
     },
     "Phone": {
       "type": "string"
@@ -102,6 +93,11 @@
     },
     "AvatarURL": {
       "type": "string"
+    },
+    "User": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "DetailUser"
     }
   }
 }
