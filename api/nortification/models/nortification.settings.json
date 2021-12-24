@@ -19,12 +19,12 @@
       "type": "string"
     },
     "HistoryDetail": {
-      "model": "history-detail",
-      "via": "Nortifications"
+      "via": "Nortifications",
+      "model": "history-detail"
     },
     "User": {
-      "model": "account-user",
-      "via": "Nortifications"
+      "via": "Nortifications",
+      "model": "account-user"
     },
     "Seen": {
       "type": "boolean",
