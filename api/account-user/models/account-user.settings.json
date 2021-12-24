@@ -95,6 +95,13 @@
     "Nortifications": {
       "via": "User",
       "collection": "nortification"
+    },
+    "FollowerNum": {
+      "type": "integer",
+      "default": 0
+    },
+    "AvatarURL": {
+      "type": "string"
     }
   }
 }

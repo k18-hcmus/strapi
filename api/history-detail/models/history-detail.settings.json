@@ -46,6 +46,10 @@
     "Nortifications": {
       "via": "HistoryDetail",
       "collection": "nortification"
+    },
+    "Deleted": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
