@@ -28,8 +28,8 @@
       "collection": "post"
     },
     "Category": {
-      "model": "category",
-      "via": "Tags"
+      "via": "Tags",
+      "model": "category"
     }
   }
 }
