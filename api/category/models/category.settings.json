@@ -12,12 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
-      "type": "string"
-    },
     "Tags": {
       "via": "Category",
       "collection": "tag"
+    },
+    "Name": {
+      "type": "enumeration",
+      "enum": [
+        "Teacher",
+        "Subject"
+      ]
     }
   }
 }
