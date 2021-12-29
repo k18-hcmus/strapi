@@ -15,9 +15,6 @@
     "Name": {
       "type": "string"
     },
-    "Description": {
-      "type": "richtext"
-    },
     "Majors": {
       "collection": "major",
       "via": "Tags",
@@ -28,8 +25,23 @@
       "collection": "post"
     },
     "Category": {
-      "via": "Tags",
-      "model": "category"
+      "model": "category",
+      "via": "Tags"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "AvatarURL": {
+      "type": "string"
+    },
+    "BackgroundTopURL": {
+      "type": "string"
+    },
+    "BackgroundBodyURL": {
+      "type": "string"
+    },
+    "RelatedTags": {
+      "collection": "tag"
     }
   }
 }
