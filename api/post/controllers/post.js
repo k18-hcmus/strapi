@@ -1,8 +1,28 @@
-'use strict';
+const { sanitizeEntity } = require('strapi-utils')
 
-/**
- * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
- * to customize this controller
- */
+module.exports = {
+  /**
+   * Retrieve a record.
+   *
+   * @return {Object}
+   */
 
-module.exports = {};
+  async findOne(ctx) {
+    const { id } = ctx.params
+    const entity = await strapi.services.post.findOne({ id })
+    return sanitizeEntity(entity, { model: strapi.models.post })
+  },
+
+  async findAllComment(ctx) {
+    const { id } = ctx.params
+
+    const entity = await strapi
+      .query('comment')
+      .find({ Post: id, _sort: 'id:desc' })
+
+    ctx.body = entity.map((e) => {
+      const { Post, ...comment } = e
+      return comment
+    })
+  }
+}

@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/posts/:id/comments",
+      "handler": "post.findAllComment",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/posts/:id",
       "handler": "post.findOne",
       "config": {
