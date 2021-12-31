@@ -1,8 +1,15 @@
-'use strict';
+module.exports = {
+  /**
+   * Promise to fetch record
+   *
+   * @return {Promise}
+   */
 
-/**
- * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-services)
- * to customize this service
- */
-
-module.exports = {};
+  findOne(params, populate) {
+    return strapi
+      .query('post')
+      .findOne(params, ['Tags', 'Comments', 'Comments.User'], {
+        orderBy: { comment: { id: 'desc' } }
+      })
+  }
+}
