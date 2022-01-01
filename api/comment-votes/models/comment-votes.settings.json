@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comment_votes",
+  "info": {
+    "name": "CommentVotes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Comment": {
+      "model": "comment",
+      "via": "CommentVotes"
+    },
+    "User": {
+      "model": "account-user",
+      "via": "CommentVotes",
+      "autoPopulate": false
+    },
+    "Upvote": {
+      "type": "boolean",
+      "default": false
+    },
+    "Downvote": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

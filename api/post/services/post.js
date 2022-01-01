@@ -8,7 +8,7 @@ module.exports = {
   findOne(params, populate) {
     return strapi
       .query('post')
-      .findOne(params, ['Tags', 'Comments', 'Comments.User'], {
+      .findOne(params, ['Tags', 'Comments', 'Comments.User', 'PostVotes'], {
         orderBy: { comment: { id: 'desc' } }
       })
   }
