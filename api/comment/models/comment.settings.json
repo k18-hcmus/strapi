@@ -41,6 +41,10 @@
     },
     "ReplyComment": {
       "model": "comment"
+    },
+    "CommentVotes": {
+      "via": "Comment",
+      "collection": "comment-votes"
     }
   }
 }

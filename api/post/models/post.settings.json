@@ -60,6 +60,10 @@
     "Nortifications": {
       "via": "AdminPost",
       "collection": "nortification"
+    },
+    "PostVotes": {
+      "via": "Post",
+      "collection": "post-vote"
     }
   }
 }

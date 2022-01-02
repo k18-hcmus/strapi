@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "post_votes",
+  "info": {
+    "name": "PostVote",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "User": {
+      "model": "account-user",
+      "via": "PostVotes",
+      "autoPopulate": false
+    },
+    "Post": {
+      "model": "post",
+      "via": "PostVotes"
+    },
+    "Upvote": {
+      "type": "boolean",
+      "default": false
+    },
+    "Downvote": {
+      "type": "boolean"
+    }
+  }
+}
