@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "Name": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "Majors": {
       "collection": "major",
@@ -42,6 +43,17 @@
     },
     "RelatedTags": {
       "collection": "tag"
+    },
+    "ColorTag": {
+      "type": "string",
+      "maxLength": 8
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Publish",
+        "Unpublish"
+      ]
     }
   }
 }
