@@ -12,8 +12,8 @@
   "pluginOptions": {},
   "attributes": {
     "Comment": {
-      "model": "comment",
-      "via": "CommentVotes"
+      "via": "CommentVotes",
+      "model": "comment"
     },
     "User": {
       "model": "account-user",
