@@ -1,3 +1,5 @@
+const { findPublishPost } = require('../controllers/post')
+const _ = require('lodash')
 module.exports = {
   /**
    * Promise to fetch record
@@ -11,5 +13,11 @@ module.exports = {
       .findOne(params, ['Tags', 'Comments', 'Comments.User', 'PostVotes'], {
         orderBy: { comment: { id: 'desc' } }
       })
+  },
+  async findPublishPost(params, populate) {
+    const results = await strapi
+      .query('post')
+      .find({ ...params, Status: 'Publish' }, populate)
+    return results
   }
 }

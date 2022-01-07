@@ -12,7 +12,10 @@ module.exports = {
     const entity = await strapi.services.post.findOne({ id })
     return sanitizeEntity(entity, { model: strapi.models.post })
   },
-
+  async findPublishPost(ctx) {
+    const entity = await strapi.services.post.findPublishPost(ctx.query)
+    return sanitizeEntity(entity, { model: strapi.models.post })
+  },
   async findAllComment(ctx) {
     const { id } = ctx.params
 
