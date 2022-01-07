@@ -39,12 +39,18 @@
       "via": "Comments",
       "model": "post"
     },
-    "ReplyComment": {
-      "model": "comment"
+    "CommentRepliedTo": {
+      "model": "comment",
+      "via": "ReplyComments"
+    },
+    "ReplyComments": {
+      "collection": "comment",
+      "via": "CommentRepliedTo"
     },
     "CommentVotes": {
       "via": "Comment",
-      "collection": "comment-votes"
+      "collection": "comment-votes",
+      "autoPopulate": true
     }
   }
 }
