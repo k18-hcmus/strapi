@@ -10,9 +10,13 @@ module.exports = {
   findOne(params, populate) {
     return strapi
       .query('post')
-      .findOne(params, ['Tags', 'Comments', 'Comments.User', 'PostVotes'], {
-        orderBy: { comment: { id: 'desc' } }
-      })
+      .findOne(
+        params,
+        ['Tags', 'Comments', 'Comments.User', 'PostVotes', 'User'],
+        {
+          orderBy: { comment: { id: 'desc' } }
+        }
+      )
   },
   async findPublishPost(params, populate) {
     const results = await strapi
